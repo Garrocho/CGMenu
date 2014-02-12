@@ -12,7 +12,7 @@
         android:id="@+id/cg_item_icon"
         android:layout_height="@dimen/cg_item_image_height"
         android:layout_width="@dimen/cg_item_image_width"
-        android:scaleType="fitCenter"
+        android:scaleType="fitStart"
          />
     
     <TextView         
@@ -24,13 +24,14 @@
         android:layout_gravity="center_vertical"
         android:paddingLeft="@dimen/cg_item_text_padding_left"
         android:singleLine="true"
-        android:ellipsize="end"/>
+        android:ellipsize="end" />
     
-     <View
+     <ImageView
         android:id="@+id/cg_item_draw"
+        android:layout_marginLeft="15dp"
         android:layout_height="@dimen/cg_item_image_height"
         android:layout_width="@dimen/cg_item_image_width"
-        android:scaleType="fitCenter"
+        android:scaleType="fitEnd"
          />
     
 
