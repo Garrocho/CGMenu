@@ -24,12 +24,12 @@
         android:textColor="@color/cg_item_text_color"
         android:layout_gravity="center_vertical"
         android:paddingLeft="@dimen/cg_item_text_padding_left"
+        android:layout_toLeftOf="@+id/cg_item_draw"
         android:singleLine="true"
         android:ellipsize="end" />
     
      <ImageView
         android:id="@+id/cg_item_draw"
-        android:layout_toRightOf="@+id/cg_item_text"
         android:layout_alignParentRight="true"
         android:layout_height="@dimen/cg_item_image_height"
         android:layout_width="@dimen/cg_item_image_width"
