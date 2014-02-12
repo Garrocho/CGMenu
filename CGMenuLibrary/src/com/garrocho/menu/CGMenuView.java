@@ -137,17 +137,19 @@ public class CGMenuView extends LinearLayout {
 	public class CGMenuItem{
 		public int id;
 		public String text;
-		public int icon;
-		public CGMenuItem(int id, String text, int icon) {
+		public int icon1;
+		public int icon2;
+		public CGMenuItem(int id, String text, int icon1, int icon2) {
 			super();
 			this.id = id;
 			this.text = text;
-			this.icon = icon;
+			this.icon1 = icon1;
+			this.icon2 = icon2;
 		}
 	}
 	
-	public CGMenuItem getNovoItem(int id, String text, int icon) {
-		return new CGMenuItem(id, text, icon);
+	public CGMenuItem getNovoItem(int id, String text, int icon1, int icon2) {
+		return new CGMenuItem(id, text, icon1, icon2);
 	}
 
 	private class Adapter extends BaseAdapter {
@@ -181,7 +183,8 @@ public class CGMenuView extends LinearLayout {
 				convertView = inflater.inflate(R.layout.cg_item, null);
 
 				holder = new ViewHolder();
-				holder.image = (ImageView) convertView.findViewById(R.id.cg_item_icon);
+				holder.image1 = (ImageView) convertView.findViewById(R.id.cg_item_icon);
+				holder.image2 = (ImageView) convertView.findViewById(R.id.cg_item_draw);
 				holder.text = (TextView) convertView.findViewById(R.id.cg_item_text);
 
 				convertView.setTag(holder);
@@ -191,14 +194,16 @@ public class CGMenuView extends LinearLayout {
 				holder = (ViewHolder) convertView.getTag();
 			}
 
-			holder.image.setImageResource(menuItems.get(position).icon);
+			holder.image1.setImageResource(menuItems.get(position).icon1);
+			holder.image2.setImageResource(menuItems.get(position).icon2);
 			holder.text.setText(menuItems.get(position).text);
 			return convertView;
 		}
 
 		class ViewHolder {
 			TextView text;
-			ImageView image;
+			ImageView image1;
+			ImageView image2;
 		}
 	}
 }
