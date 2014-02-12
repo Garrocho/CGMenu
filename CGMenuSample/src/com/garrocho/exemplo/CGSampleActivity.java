@@ -26,9 +26,9 @@ public class CGSampleActivity extends Activity implements ICGMenuCallback {
 		
 		for(int i=0; i <= 15; i++) {
 			if (i%2 == 0)
-				menuItems.add(cgView.getNovoItem(i, "CGSample " + i, android.R.drawable.presence_busy));
+				menuItems.add(cgView.getNovoItem(i, "CGSample " + i, android.R.drawable.star_on, android.R.drawable.presence_away));
 			else
-				menuItems.add(cgView.getNovoItem(i, "CGSample " + i, android.R.drawable.presence_online));
+				menuItems.add(cgView.getNovoItem(i, "CGSample " + i, android.R.drawable.star_on, 0));
 		}
 		cgView.setMenuItems(menuItems);
 	}
